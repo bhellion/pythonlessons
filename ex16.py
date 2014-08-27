@@ -5,7 +5,7 @@ script,filename = argv
 raw_input('We\'re going to erase %r. If you don\'t want to do that, use ctrl-c, else enter to continue. ' %filename)
 
 print 'Opening the file...'
-target = open(filename,'w')
+target = open(filename,'w+')
 
 print 'Truncating the file. Woops!'
 target.truncate()
@@ -23,8 +23,8 @@ target.write(line2)
 target.write('\n')
 target.write(line3 + '\n')
 
-# target.open()
+target.seek(0)
 
-# print target.read()
+print target.read()
 
 target.close()
