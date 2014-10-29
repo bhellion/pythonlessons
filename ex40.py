@@ -5,6 +5,9 @@ class Song(object):
  def sing(self):
   for line in self.lyrics:
    print line
+ 
+ def encore(self):
+  print self.lyrics[len(self.lyrics)-1]
    
 happy_bday = Song(['AAAA',
 'BBBBB',
@@ -18,3 +21,7 @@ happy_bday.sing()
 print '-'*10
 
 another_song.sing()
+
+print '-'*10
+
+happy_bday.encore()
